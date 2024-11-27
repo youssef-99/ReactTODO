@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const TodoItem = (props) => {
   const [item, setItem] = useState(props.todo);
@@ -16,6 +17,7 @@ const TodoItem = (props) => {
           checked={item.completed}
           onChange={onChange}
         />
+        <Link to={`${item.id}`}>Read More</Link>
       </div>
     </>
   );
